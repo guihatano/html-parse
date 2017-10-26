@@ -1,0 +1,19 @@
+<p> Getting list from http://aalmiray.github.io/ikonli/cheat-sheet-ionicons.html</p>
+
+<%#= select_tag "teste", options_for_select(@array), {class: "form-control"} %>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    icons list
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <% @array.each do |name| %>
+			<a class="dropdown-item" href="#"><i class='<%= name %>'></i> <%= name %></a>
+		<% end %>
+  </div>
+</div>
+<br>
+
+<% @array.each do |name| %>
+	<p><i class='<%= name %>'></i> <%= name %></p>
+<% end %>
